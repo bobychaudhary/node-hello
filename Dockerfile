@@ -1,11 +1,10 @@
 FROM node:slim
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 # Bundle app source
-COPY . .
-EXPOSE 3000
-CMD [ "node", "server.js" ]
+COPY server.js .
+CMD [ "npm", "start" ]
