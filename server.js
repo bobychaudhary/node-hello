@@ -6,7 +6,7 @@ const app = express()
 app.get('/', (request, Response) => {
   return Response.json({
     data: {
-      message: 'Hello World',
+      message: 'Hello there!',
     },
   })
 })
